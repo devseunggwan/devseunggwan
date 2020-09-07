@@ -1,4 +1,4 @@
-http://mazassumnida.wtf/api/generate_badge?boj=gtr7852
+[![Solved.ac 프로필](http://mazassumnida.wtf/api/generate_badge?boj=gtr7852)](https://solved.ac/gtr7852)
 
 <!--
 **devSeungGwan/devSeungGwan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
