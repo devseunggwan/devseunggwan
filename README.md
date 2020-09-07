@@ -1,5 +1,7 @@
 [![Solved.ac 프로필](http://mazassumnida.wtf/api/generate_badge?boj=gtr7852)](https://solved.ac/gtr7852)
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FdevSeungGwan%2Fhit-counter&count_bg=%233D94C8&title_bg=%23555555&icon=nintendogamecube.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 <!--
 **devSeungGwan/devSeungGwan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
