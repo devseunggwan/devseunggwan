@@ -3,10 +3,13 @@
 
 
 <div align='center'>
-	<h3>
+	<h2>
         📚 Tech Stack
-    </h3>
+    </h2>
 </div>
+
+
+
 |  Num  |        Categories         | Contents                                                     |
 | :---: | :-----------------------: | ------------------------------------------------------------ |
 | **1** |      🎨**Languages**       | <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white"/>  <img src="https://img.shields.io/badge/CSharp-239120?style=flat-square&logo=c%20sharp&logoColor=white"/> <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=R&logoColor=white"/> |
@@ -21,9 +24,9 @@
 
 
 <div align='center'>
-	<h3>
+	<h2>
         🌵 Github Stats
-    </h3>
+    </h2>
 </div>
 
 ​    ![devSeungGwan's GitHub stats](https://github-readme-stats.vercel.app/api?username=devSeungGwan&show_icons=True&count_private=true&theme=dracula&hide_rank=true&hide_title=true) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=devSeungGwan&theme=dracula&layout=compact)
@@ -33,9 +36,9 @@
 
 
 <div align='center'>
-	<h3>
+	<h2>
         👀 Communities
-    </h3>
+    </h2>
     <a href="https://velog.io/@devSeungGwan"><img src="https://img.shields.io/badge/velog-1DBF73?style=flat-square&logo=Vimeo&logoColor=white"/></a>
     <a href="https://www.rocketpunch.com/@devSeungGwan"><img src="https://img.shields.io/badge/Rocket Punch-4d62fe?style=flat-square&logo=&logoColor=white"/></a>
     <a href="https://solved.ac/profile/gtr7852"><img src="https://img.shields.io/badge/solved.ac-17ce3a?style=flat-square&logo=&logoColor=white"/></a>
