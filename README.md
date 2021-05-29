@@ -1,5 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=devSeungGwan&fontSize=70&animation=fadeIn&desc=Github&descAlignY=30&reversal=true)
 
+
+
 <div align='center'>
 	<h3>
         📚 Tech Stack
@@ -20,8 +22,9 @@
     </h3>
 </div>
 
-
 ​    ![devSeungGwan's GitHub stats](https://github-readme-stats.vercel.app/api?username=devSeungGwan&show_icons=True&count_private=true&theme=dracula&hide_rank=true&hide_title=true) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=devSeungGwan&theme=dracula&layout=compact)
+
+
 
 <div align='center'>
 	<h3>
