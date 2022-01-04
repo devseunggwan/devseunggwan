@@ -4,24 +4,6 @@
 	<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FdevSeungGwan%2Fhit-counter&count_bg=%233D9EC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </div>
 
-<div align='center'>
-	<h2>
-        📚 Tech Stack
-    </h2>
-</div>
-
-
-
-|  Num  |        Categories         | Contents                                                     |
-| :---: | :-----------------------: | ------------------------------------------------------------ |
-| **1** |      🎨**Languages**       | <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white"/>  <img src="https://img.shields.io/badge/CSharp-239120?style=flat-square&logo=c%20sharp&logoColor=white"/> |
-| **2** |     🌎**Develop Envs**     | <img src="https://img.shields.io/badge/VSCODE-007ACC?style=flat-square&logo=Visual%20Studio%20Code&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"/> <img src="https://img.shields.io/badge/Github-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Teams-6264A7?style=flat-square&logo=Microsoft%20Teams&logoColor=white"/> <img src="https://img.shields.io/badge/Sharepoint-0078D4?style=flat-square&logo=Microsoft%20SharePoint&logoColor=white"/> <img src="https://img.shields.io/badge/WSL-4D4D4D?style=flat-square&logo=Windows%20Terminal&logoColor=white"/> <img src="https://img.shields.io/badge/ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white"/> |
-| **3** |   🏍**DevOps**    | <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white"/> <img src="https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=Jenkins&logoColor=white"/> <img src="https://img.shields.io/badge/AWS%20EC2-232F3E?style=flat-square&logo=Amazon%20AWS&logoColor=white"/> |
-| **5** |   🎙**Python Libraries**   | <img src="https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=Keras&logoColor=white"/> <img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/> <img src="https://img.shields.io/badge/Scikit%20Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/> <img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/> <img src="https://img.shields.io/badge/Pycaret-27aae0?style=flat-square&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/PanasProfiling-cc5c29?style=flat-square&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/Black-000000?style=flat-square&logo=python&logoColor=white"/> |
-| **6** | 🚥**Edge Computer & Tools** | <img src="https://img.shields.io/badge/Nvidia%20Jetson-76B900?style=flat-square&logo=Nvidia&logoColor=white"/> <img src="https://img.shields.io/badge/Coral%20dev%20board-ff796b?style=flat-square&logo=&logoColor=white"/> <img src="https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=Raspberry%20Pi&logoColor=white"/> <img src="https://img.shields.io/badge/ZED-0f0f11?style=flat-square&logo=&logoColor=white"/> |
-
-
-
 
 
 <div align='center'>
