@@ -1,29 +1,58 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=devSeungGwan&fontSize=70&animation=fadeIn&desc=Github&descAlignY=30&reversal=true)
+![header](https://capsule-render.vercel.app/api?type=rect&color=auto&height=80&section=header&text=Hello👋%20I'm%20Developer%20Seunggwan&fontSize=40)
+
+---
 
 <div align='center'>
-	<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FdevSeungGwan%2Fhit-counter&count_bg=%233D9EC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+    <h3>
+        Interested In
+    </h3>
+    <img src="https://img.shields.io/badge/Data%20Engineering-000000?style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/Backend%20Engineering-000000?style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/Infra%20Engineering-000000?style=for-the-badge&logoColor=white">
 </div>
 
-
+---
 
 <div align='center'>
-	<h2>
-        🌵 Github Stats
-    </h2>
+    <h3>
+        Languages
+    </h3>
+    <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
+    <img src="https://img.shields.io/badge/SQL-003B57?style=flat-square&logo=SQLite&logoColor=white"/>
 </div>
 
-​    ![devSeungGwan's GitHub stats](https://github-readme-stats.vercel.app/api?username=devSeungGwan&show_icons=True&count_private=true&theme=dracula&hide_rank=true&hide_title=true) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=devSeungGwan&theme=dracula&layout=compact)
-
-
-
-
+---
 
 <div align='center'>
-	<h2>
-        👀 Communities
-    </h2>
-    <a href="https://velog.io/@devSeungGwan"><img src="https://img.shields.io/badge/velog-1DBF73?style=flat-square&logo=Vimeo&logoColor=white"/></a>
-    <a href="https://www.rocketpunch.com/@devSeungGwan"><img src="https://img.shields.io/badge/Rocket Punch-4d62fe?style=flat-square&logo=&logoColor=white"/></a>
-    <a href="https://solved.ac/profile/gtr7852"><img src="https://img.shields.io/badge/solved.ac-17ce3a?style=flat-square&logo=&logoColor=white"/></a>
+    <h3>
+        Stacks
+    </h3>
+    <img src="https://img.shields.io/badge/AWS EC2-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white"/>
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=Keras&logoColor=white"/>
+    <img src="https://img.shields.io/badge/ScikitLearn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=Kubernetes&logoColor=white"/>
+
 </div>
 
+---
+
+<div align='center'>
+    <h3>
+        Contribution Graphs
+    </h3>
+</div>
+
+<div align='center'>
+
+![aa](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=devseunggwan&theme=github_dark)
+![bb](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=devseunggwan&theme=github_dark&exclude=Jupyter%20Notebook) ![cc](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=devseunggwan&theme=github_dark&exclude=Jupyter%20Notebook)
+![dd](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark) ![ee](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=devseunggwan&theme=github_dark&utcOffset=9)
+
+</div>
