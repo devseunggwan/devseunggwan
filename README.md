@@ -18,8 +18,8 @@
         Languages
     </h3>
     <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Java-3776AB?style=flat-square&logo=python&logoColor=white"/>
     <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Java-FFFFFF?style=flat-square&logoColor=white"/>
     <img src="https://img.shields.io/badge/SQL-000000?style=flat-square&logoColor=white"/>
 </div>
 
