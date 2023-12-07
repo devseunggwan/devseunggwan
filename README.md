@@ -6,9 +6,9 @@
     <h3>
         Interested In
     </h3>
-    <img src="https://img.shields.io/badge/Data%20Engineering-000000?style=for-the-badge&logoColor=white">
-    <img src="https://img.shields.io/badge/Backend%20Engineering-000000?style=for-the-badge&logoColor=white">
-    <img src="https://img.shields.io/badge/Infra%20Engineering-000000?style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/Data%20Engineering-16453e?style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/Backend%20Engineering-16453e?style=for-the-badge&logoColor=white">
+    <img src="https://img.shields.io/badge/Infra%20Engineering-16453e?style=for-the-badge&logoColor=white">
 </div>
 
 ---
