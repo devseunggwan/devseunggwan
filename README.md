@@ -13,6 +13,6 @@
 <img
   src="https://render.gitanimals.org/farms/devseunggwan"
   width="1000"
-  height="400"
+  height="250"
 />
 </a>
