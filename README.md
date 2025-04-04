@@ -14,7 +14,7 @@
   <img
     src="https://render.gitanimals.org/lines/devseunggwan"
     width="1000"
-    height="120"
+    height="240"
   />
 </a>
   
