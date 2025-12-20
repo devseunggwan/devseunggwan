@@ -12,8 +12,6 @@ Data Engineer based in Seoul, Korea 🇰🇷
 
 [![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=devseunggwan&theme=merko&height=300)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
-<img src="./profile-3d-contrib/profile-gitblock.svg" alt="3D Contrib"/>
-
 <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=devseunggwan&utm_content=farm">
 <img
   src="https://render.gitanimals.org/farms/devseunggwan"
