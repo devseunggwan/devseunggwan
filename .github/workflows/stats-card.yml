@@ -1,0 +1,64 @@
+name: Stats Card
+
+on:
+  schedule:
+    # 30 minutes after profile-3d.yml: both workflows commit to master, and a
+    # shared trigger time makes one of the two pushes lose on non-fast-forward.
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+  # workflow_dispatch only reaches workflows already on the default branch,
+  # so a PR touching the generator needs its own trigger to prove the render
+  # works under secrets.GITHUB_TOKEN before the card goes live.
+  pull_request:
+    paths:
+      - scripts/build_stats_card.py
+      - .github/workflows/stats-card.yml
+
+# Least privilege for both jobs; publish raises its own to write.
+permissions:
+  contents: read
+
+jobs:
+  # Split from publish so a pull_request run never gets a write-capable token.
+  # `permissions:` takes no expression, so one job cannot hold both levels —
+  # and the code the render step executes is code the PR itself can change.
+  verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    name: verify-stats-card
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Render stats/stats.svg
+        env:
+          # contributionCalendar answers the same under any token, so the card
+          # needs no PAT — measured in CI, every year matched the owner's own
+          # while the per-type totals collapsed. See the script's docstring.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_stats_card.py "${{ github.repository_owner }}" stats/stats.svg
+
+  publish:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    name: generate-stats-card
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render stats/stats.svg
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_stats_card.py "${{ github.repository_owner }}" stats/stats.svg
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add stats/stats.svg
+          git diff --cached --quiet || git commit -m "chore: refresh stats card"
+          # profile-3d.yml commits to the same branch; a manual dispatch of
+          # both at once leaves whichever pushes second behind by one commit.
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push

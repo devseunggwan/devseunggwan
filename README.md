@@ -30,15 +30,24 @@ Data Engineer based in Seoul, Korea 🇰🇷
      each card is wider than a phone column so neither leaves a gap.
 
      The two widths are what make the cards the same height: the sources are
-     340x200 and 495x195, so 331 and 495 both land on ~195px and the tops line
-     up. Their sum plus the inline gap is the 830 the rows above and below use.
+     331x195 and 495x195, so both render at 195px and the tops line up. Their
+     sum plus the inline gap is the 830 the rows above and below use.
+
+     The left card is generated in this repository by
+     .github/workflows/stats-card.yml. The third-party card it replaced read
+     per-type totals (commits, PRs, issues), which count only repositories the
+     asking token can see — 11 of 73 here — so it showed 1.1k all-time commits
+     beside a streak card reporting 18,938. Both were right about different
+     populations. Every row here comes from the contribution calendar instead,
+     which answers the same under any token, and none of them repeats a number
+     the streak card already prints (#5).
 
      The streak card's colors are set one by one rather than by a theme name:
-     every bundled theme draws a border that does not match the summary card's
+     every bundled theme draws a border that does not match the left card's
      #2e343b, and github-dark-blue's is near-white. -->
 
 <p>
-  <img alt="Total stars, commits, pull requests and issues" width="331" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
+  <img alt="Contribution activity: active days, per-day average, best day" width="331" src="./stats/stats.svg" />
   <img alt="Current and longest contribution streak" width="495" src="https://streak-stats.demolab.com/?user=devseunggwan&background=0D1117&border=2E343B&stroke=2E343B&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=8B949E&sideLabels=8B949E&dates=8B949E" />
 </p>
 
