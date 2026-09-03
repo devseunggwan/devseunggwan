@@ -30,15 +30,21 @@ Data Engineer based in Seoul, Korea 🇰🇷
      each card is wider than a phone column so neither leaves a gap.
 
      The two widths are what make the cards the same height: the sources are
-     340x200 and 495x195, so 331 and 495 both land on ~195px and the tops line
-     up. Their sum plus the inline gap is the 830 the rows above and below use.
+     331x195 and 495x195, so both render at 195px and the tops line up. Their
+     sum plus the inline gap is the 830 the rows above and below use.
+
+     The left card is generated in this repository by
+     .github/workflows/stats-card.yml. The third-party card it replaced read
+     GitHub's totals through a query that silently drops a year it cannot
+     afford, and reported 1.1k all-time commits for an account whose 2026 alone
+     holds 4,791 (#5).
 
      The streak card's colors are set one by one rather than by a theme name:
-     every bundled theme draws a border that does not match the summary card's
+     every bundled theme draws a border that does not match the left card's
      #2e343b, and github-dark-blue's is near-white. -->
 
 <p>
-  <img alt="Total stars, commits, pull requests and issues" width="331" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
+  <img alt="All-time commits, pull requests, issues and reviews" width="331" src="./stats/stats.svg" />
   <img alt="Current and longest contribution streak" width="495" src="https://streak-stats.demolab.com/?user=devseunggwan&background=0D1117&border=2E343B&stroke=2E343B&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=8B949E&sideLabels=8B949E&dates=8B949E" />
 </p>
 
