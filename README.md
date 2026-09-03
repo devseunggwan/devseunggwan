@@ -25,17 +25,12 @@ Data Engineer based in Seoul, Korea 🇰🇷
      starts with <img> would otherwise become its own block and stack.
      Widths are pixels, not percentages: a percentage never wraps, so on a
      phone it squeezes the whole row into one line instead of stacking.
-     Rows sum to ~825px, which fills the README column on desktop. -->
+     The row sums to ~825px, which fills the README column on desktop, and
+     each card is wider than a phone column so neither leaves a gap. -->
 
 <p>
   <img alt="Total stars, commits, pull requests and issues" width="335" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
   <img alt="Current and longest contribution streak" width="490" src="https://streak-stats.demolab.com/?user=devseunggwan&theme=github-dark-blue" />
-</p>
-
-<p>
-  <img alt="Top languages by repository" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=devseunggwan&theme=github_dark" />
-  <img alt="Top languages by commit" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=devseunggwan&theme=github_dark" />
-  <img alt="Commits per hour of day (UTC+9)" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=devseunggwan&theme=github_dark&utcOffset=9" />
 </p>
 
 ### Farm
