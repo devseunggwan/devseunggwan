@@ -33,7 +33,7 @@ jobs:
           # account's 73 are private, so it renders 1,162 commits where the
           # profile calendar counts 9,463. STATS_TOKEN is a PAT with read
           # access to them.
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
         run: |
           test -n "$GH_TOKEN" || {
             echo "::error::STATS_TOKEN secret is not set — see .github/workflows/stats-card.yml"
