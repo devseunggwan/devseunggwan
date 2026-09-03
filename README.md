@@ -34,10 +34,11 @@ Data Engineer based in Seoul, Korea 🇰🇷
      sum plus the inline gap is the 830 the rows above and below use.
 
      The left card is generated in this repository by
-     .github/workflows/stats-card.yml. The third-party card it replaced read
-     GitHub's totals through a query that silently drops a year it cannot
-     afford, and reported 1.1k all-time commits for an account whose 2026 alone
-     holds 4,791 (#5).
+     .github/workflows/stats-card.yml. The third-party card it replaced counted
+     only public repositories — 11 of 73 here — so it read 1.1k all-time commits
+     beside a streak card reporting 18,938 contributions from the profile
+     calendar, which does include private ones. Both were right about different
+     populations; this card counts the same one as its neighbour (#5).
 
      The streak card's colors are set one by one rather than by a theme name:
      every bundled theme draws a border that does not match the left card's

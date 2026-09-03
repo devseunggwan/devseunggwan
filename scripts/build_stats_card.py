@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Render an all-time contribution stats card from GitHub's own GraphQL API.
 
-The third-party card this replaces reported 1.1k all-time commits for an
-account whose 2026 alone holds 4,791 — its generator documents a query-cost
-failure on high-volume user-years, and a year it fails to fetch disappears from
-the sum without a trace. So the rule here is that a year which cannot be read
-raises: a wrong number must cost a red workflow run, never a quietly smaller
-total.
+contributionsCollection answers from the *viewer's* vantage point, so the same
+query returns 9,463 all-time commits to the account owner and 1,162 to a token
+that can only see public repositories. The third-party card this replaces was
+reading the public view and was not wrong; it simply counted a different
+population than the streak card beside it, which reports the profile calendar
+and does include private contributions.
+
+Both failure modes here are silent by nature — a year that errors and a token
+that cannot see 62 of 73 repositories both just make the total smaller. So both
+raise: a wrong number must cost a red workflow run.
 """
 
 import json
@@ -24,6 +28,7 @@ query($login:String!, $from:DateTime!, $to:DateTime!) {
       totalPullRequestContributions
       totalIssueContributions
       totalPullRequestReviewContributions
+      restrictedContributionsCount
     }
   }
 }
@@ -49,6 +54,10 @@ ACCENT = "#58a6ff"
 # Matches the streak card's rendered height at its README width, so the two
 # cards' tops line up on one row (#3).
 WIDTH, HEIGHT = 331, 195
+
+# 1%: above it the token is blind to whole repositories rather than to the
+# handful of contributions no token ever recovers.
+BLIND_TOKEN_RATIO = 0.01
 
 METRICS = (
     ("Commits", "totalCommitContributions"),
@@ -80,6 +89,7 @@ def collect(login: str) -> tuple[str, list[dict[str, Any]], dict[str, int]]:
     now = datetime.now(timezone.utc)
     per_year: list[dict[str, Any]] = []
     totals = {field: 0 for _, field in METRICS}
+    restricted = 0
     for year in years:
         start = f"{year}-01-01T00:00:00Z"
         end = (
@@ -87,15 +97,32 @@ def collect(login: str) -> tuple[str, list[dict[str, Any]], dict[str, int]]:
             if year == now.year
             else f"{year}-12-31T23:59:59Z"
         )
-        # One year per request: the combined multi-year form is what trips
-        # GitHub's cost estimator on heavy accounts.
+        # One year per request so the workflow log carries a per-year audit
+        # trail: a total that looks wrong is then readable without a rerun.
         collection = graphql(CONTRIBUTIONS_QUERY, login=login, **{"from": start, "to": end})[
             "user"
         ]["contributionsCollection"]
         row = {"year": year, **{field: collection[field] for _, field in METRICS}}
         per_year.append(row)
+        restricted += collection["restrictedContributionsCount"]
         for _, field in METRICS:
             totals[field] += row[field]
+
+    # Contributions in repositories the token cannot read are reported only as
+    # this count, never inside the metrics, so a blind token yields a smaller
+    # card and nothing else in the response objects. A residue survives every
+    # token — 14 of this account's, all in 2021, sit in a repository even the
+    # owner can no longer read — so the test is proportion, not presence. The
+    # two cases are three orders of magnitude apart (0.07% against roughly 87%
+    # for a public-only token), which is what makes the constant unimportant.
+    visible = sum(totals.values())
+    if restricted > BLIND_TOKEN_RATIO * (visible + restricted):
+        raise RuntimeError(
+            f"{restricted} of {visible + restricted} contributions sit in repositories "
+            "this token cannot read, so the card would undercount. Run with a token "
+            "that can read them (the workflow expects the STATS_TOKEN secret)."
+        )
+    print(f"  restricted={restricted} visible={visible}", file=sys.stderr)
     return profile["createdAt"], per_year, totals
 
 
