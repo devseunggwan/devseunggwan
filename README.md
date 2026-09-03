@@ -19,20 +19,20 @@ Data Engineer based in Seoul, Korea 🇰🇷
 
 ### Stats
 
-<img alt="GitHub stats: total stars, commits, PRs and issues" width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
-<img alt="Current and longest contribution streak" width="49%" src="https://streak-stats.demolab.com/?user=devseunggwan&theme=github-dark-blue" />
+<!-- Widths are in pixels on purpose: percentage widths never wrap, so on a
+     phone they would squeeze two cards into one row instead of stacking.
+     Each row sums to ~830px, which fills the README column on desktop and
+     falls back to one card per row once the viewport is narrower. -->
 
-<img alt="Top languages by repository" width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=devseunggwan&theme=github_dark" />
-<img alt="Top languages by commit" width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=devseunggwan&theme=github_dark" />
+<img alt="Total stars, commits, pull requests and issues" width="335" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
+<img alt="Current and longest contribution streak" width="490" src="https://streak-stats.demolab.com/?user=devseunggwan&theme=github-dark-blue" />
 
-<img alt="Commits per hour of day (UTC+9)" width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=devseunggwan&theme=github_dark&utcOffset=9" />
+<img alt="Top languages by repository" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=devseunggwan&theme=github_dark" />
+<img alt="Top languages by commit" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=devseunggwan&theme=github_dark" />
+<img alt="Commits per hour of day (UTC+9)" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=devseunggwan&theme=github_dark&utcOffset=9" />
 
 ### Farm
 
 <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=devseunggwan&utm_content=farm">
-<img
-  src="https://render.gitanimals.org/farms/devseunggwan"
-  width="600"
-  height="300"
-/>
+<img alt="gitanimals farm" src="https://render.gitanimals.org/farms/devseunggwan" width="830" />
 </a>
