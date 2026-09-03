@@ -14,19 +14,24 @@ on:
       - scripts/build_stats_card.py
       - .github/workflows/stats-card.yml
 
+# Least privilege for both jobs; publish raises its own to write.
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build:
+  # Split from publish so a pull_request run never gets a write-capable token.
+  # `permissions:` takes no expression, so one job cannot hold both levels —
+  # and the code the render step executes is code the PR itself can change.
+  verify:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    name: generate-stats-card
+    name: verify-stats-card
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
         with:
-          # A PR run only reads; leaving the push credential on its runner
-          # hands repo-write to code the PR itself introduced.
-          persist-credentials: ${{ github.event_name != 'pull_request' }}
+          persist-credentials: false
       - name: Render stats/stats.svg
         env:
           # contributionCalendar answers the same under any token, so the card
@@ -34,8 +39,20 @@ jobs:
           # while the per-type totals collapsed. See the script's docstring.
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/build_stats_card.py "${{ github.repository_owner }}" stats/stats.svg
+
+  publish:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    name: generate-stats-card
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render stats/stats.svg
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_stats_card.py "${{ github.repository_owner }}" stats/stats.svg
       - name: Commit & Push
-        if: github.event_name != 'pull_request'
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
