@@ -15,24 +15,33 @@ Data Engineer based in Seoul, Korea 🇰🇷
 <!-- Generated in this repository by .github/workflows/profile-3d.yml, so it does
      not depend on any third-party renderer staying up. -->
 
-![3D contribution calendar](./profile-3d-contrib/profile-green-animate.svg)
+<p>
+  <img alt="3D contribution calendar" width="830" src="./profile-3d-contrib/profile-green-animate.svg" />
+</p>
 
 ### Stats
 
-<!-- Widths are in pixels on purpose: percentage widths never wrap, so on a
-     phone they would squeeze two cards into one row instead of stacking.
-     Each row sums to ~830px, which fills the README column on desktop and
-     falls back to one card per row once the viewport is narrower. -->
+<!-- Each row is one <p> so the images stay inline and can wrap; a line that
+     starts with <img> would otherwise become its own block and stack.
+     Widths are pixels, not percentages: a percentage never wraps, so on a
+     phone it squeezes the whole row into one line instead of stacking.
+     Rows sum to ~825px, which fills the README column on desktop. -->
 
-<img alt="Total stars, commits, pull requests and issues" width="335" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
-<img alt="Current and longest contribution streak" width="490" src="https://streak-stats.demolab.com/?user=devseunggwan&theme=github-dark-blue" />
+<p>
+  <img alt="Total stars, commits, pull requests and issues" width="335" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
+  <img alt="Current and longest contribution streak" width="490" src="https://streak-stats.demolab.com/?user=devseunggwan&theme=github-dark-blue" />
+</p>
 
-<img alt="Top languages by repository" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=devseunggwan&theme=github_dark" />
-<img alt="Top languages by commit" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=devseunggwan&theme=github_dark" />
-<img alt="Commits per hour of day (UTC+9)" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=devseunggwan&theme=github_dark&utcOffset=9" />
+<p>
+  <img alt="Top languages by repository" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=devseunggwan&theme=github_dark" />
+  <img alt="Top languages by commit" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=devseunggwan&theme=github_dark" />
+  <img alt="Commits per hour of day (UTC+9)" width="275" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=devseunggwan&theme=github_dark&utcOffset=9" />
+</p>
 
 ### Farm
 
-<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=devseunggwan&utm_content=farm">
-<img alt="gitanimals farm" src="https://render.gitanimals.org/farms/devseunggwan" width="830" />
-</a>
+<p>
+  <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=devseunggwan&utm_content=farm">
+    <img alt="gitanimals farm" width="830" src="https://render.gitanimals.org/farms/devseunggwan" />
+  </a>
+</p>
