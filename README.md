@@ -34,18 +34,20 @@ Data Engineer based in Seoul, Korea 🇰🇷
      sum plus the inline gap is the 830 the rows above and below use.
 
      The left card is generated in this repository by
-     .github/workflows/stats-card.yml. The third-party card it replaced counted
-     only public repositories — 11 of 73 here — so it read 1.1k all-time commits
-     beside a streak card reporting 18,938 contributions from the profile
-     calendar, which does include private ones. Both were right about different
-     populations; this card counts the same one as its neighbour (#5).
+     .github/workflows/stats-card.yml. The third-party card it replaced read
+     per-type totals (commits, PRs, issues), which count only repositories the
+     asking token can see — 11 of 73 here — so it showed 1.1k all-time commits
+     beside a streak card reporting 18,938. Both were right about different
+     populations. Every row here comes from the contribution calendar instead,
+     which answers the same under any token, and none of them repeats a number
+     the streak card already prints (#5).
 
      The streak card's colors are set one by one rather than by a theme name:
      every bundled theme draws a border that does not match the left card's
      #2e343b, and github-dark-blue's is near-white. -->
 
 <p>
-  <img alt="All-time commits, pull requests, issues and reviews" width="331" src="./stats/stats.svg" />
+  <img alt="Contribution activity: active days, per-day average, best day" width="331" src="./stats/stats.svg" />
   <img alt="Current and longest contribution streak" width="495" src="https://streak-stats.demolab.com/?user=devseunggwan&background=0D1117&border=2E343B&stroke=2E343B&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=8B949E&sideLabels=8B949E&dates=8B949E" />
 </p>
 
