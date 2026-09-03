@@ -18,7 +18,7 @@ Data Engineer based in Seoul, Korea 🇰🇷
      not depend on any third-party renderer staying up. -->
 
 <p>
-  <img alt="3D contribution calendar" width="830" src="./profile-3d-contrib/profile-green-animate.svg" />
+  <img alt="3D contribution calendar" width="830" src="./profile-3d-contrib/profile-night-view.svg" />
 </p>
 
 ### Stats
@@ -27,12 +27,19 @@ Data Engineer based in Seoul, Korea 🇰🇷
      starts with <img> would otherwise become its own block and stack.
      Widths are pixels, not percentages: a percentage never wraps, so on a
      phone it squeezes the whole row into one line instead of stacking.
-     The row sums to ~825px, which fills the README column on desktop, and
-     each card is wider than a phone column so neither leaves a gap. -->
+     each card is wider than a phone column so neither leaves a gap.
+
+     The two widths are what make the cards the same height: the sources are
+     340x200 and 495x195, so 331 and 495 both land on ~195px and the tops line
+     up. Their sum plus the inline gap is the 830 the rows above and below use.
+
+     The streak card's colors are set one by one rather than by a theme name:
+     every bundled theme draws a border that does not match the summary card's
+     #2e343b, and github-dark-blue's is near-white. -->
 
 <p>
-  <img alt="Total stars, commits, pull requests and issues" width="335" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
-  <img alt="Current and longest contribution streak" width="490" src="https://streak-stats.demolab.com/?user=devseunggwan&theme=github-dark-blue" />
+  <img alt="Total stars, commits, pull requests and issues" width="331" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=devseunggwan&theme=github_dark" />
+  <img alt="Current and longest contribution streak" width="495" src="https://streak-stats.demolab.com/?user=devseunggwan&background=0D1117&border=2E343B&stroke=2E343B&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=8B949E&sideLabels=8B949E&dates=8B949E" />
 </p>
 
 ### Farm
