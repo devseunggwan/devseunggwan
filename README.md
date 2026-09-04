@@ -12,8 +12,6 @@ Data Engineer based in Seoul, Korea 🇰🇷
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white)
 
-### Contributions
-
 <!-- Generated in this repository by .github/workflows/profile-3d.yml, so it does
      not depend on any third-party renderer staying up. -->
 
@@ -21,9 +19,7 @@ Data Engineer based in Seoul, Korea 🇰🇷
   <img alt="3D contribution calendar" width="830" src="./profile-3d-contrib/profile-night-view.svg" />
 </p>
 
-### Stats
-
-<!-- Each row is one <p> so the images stay inline and can wrap; a line that
+<!-- The row is one <p> so the images stay inline and can wrap; a line that
      starts with <img> would otherwise become its own block and stack.
      Widths are pixels, not percentages: a percentage never wraps, so on a
      phone it squeezes the whole row into one line instead of stacking.
@@ -31,7 +27,8 @@ Data Engineer based in Seoul, Korea 🇰🇷
 
      The two widths are what make the cards the same height: the sources are
      331x195 and 495x195, so both render at 195px and the tops line up. Their
-     sum plus the inline gap is the 830 the rows above and below use.
+     sum plus the single space between the tags is the 830 the rows above and
+     below use — closing that space costs 4px of alignment.
 
      The left card is generated in this repository by
      .github/workflows/stats-card.yml. The third-party card it replaced read
@@ -46,12 +43,7 @@ Data Engineer based in Seoul, Korea 🇰🇷
      every bundled theme draws a border that does not match the left card's
      #2e343b, and github-dark-blue's is near-white. -->
 
-<p>
-  <img alt="Contribution activity: active days, per-day average, best day" width="331" src="./stats/stats.svg" />
-  <img alt="Current and longest contribution streak" width="495" src="https://streak-stats.demolab.com/?user=devseunggwan&background=0D1117&border=2E343B&stroke=2E343B&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=8B949E&sideLabels=8B949E&dates=8B949E" />
-</p>
-
-### Farm
+<p><img alt="Contribution activity: active days, per-day average, best day" width="331" src="./stats/stats.svg" /> <img alt="Current and longest contribution streak" width="495" src="https://streak-stats.demolab.com/?user=devseunggwan&background=0D1117&border=2E343B&stroke=2E343B&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=8B949E&sideLabels=8B949E&dates=8B949E" /></p>
 
 <p>
   <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=devseunggwan&utm_content=farm">
