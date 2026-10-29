@@ -2,8 +2,6 @@ name: Stats Card
 
 on:
   schedule:
-    # 30 minutes after profile-3d.yml: both workflows commit to master, and a
-    # shared trigger time makes one of the two pushes lose on non-fast-forward.
     - cron: "30 18 * * *"
   workflow_dispatch:
   # workflow_dispatch only reaches workflows already on the default branch,
@@ -58,7 +56,6 @@ jobs:
           git config user.email github-actions@github.com
           git add stats/stats.svg
           git diff --cached --quiet || git commit -m "chore: refresh stats card"
-          # profile-3d.yml commits to the same branch; a manual dispatch of
-          # both at once leaves whichever pushes second behind by one commit.
+          # Guards against a push that lands on master while this job runs.
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push

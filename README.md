@@ -12,11 +12,13 @@ Data Engineer based in Seoul, Korea 🇰🇷
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white)
 
-<!-- Generated in this repository by .github/workflows/profile-3d.yml, so it does
-     not depend on any third-party renderer staying up. -->
+<!-- Activity graph rendered by github-readme-activity-graph
+     (https://github.com/Ashutosh00710/github-readme-activity-graph).
+     Colors are set one by one to match the cards below: background #0D1117,
+     border #2E343B, text #C9D1D9, accent #58A6FF. -->
 
 <p>
-  <img alt="3D contribution calendar" width="830" src="./profile-3d-contrib/profile-night-view.svg" />
+  <img alt="Contribution activity graph" width="830" src="https://github-readme-activity-graph.vercel.app/graph?username=devseunggwan&bg_color=0D1117&border_color=2E343B&color=C9D1D9&title_color=C9D1D9&line=58A6FF&point=58A6FF&area=true&area_color=58A6FF&radius=6" />
 </p>
 
 <!-- The row is one <p> so the images stay inline and can wrap; a line that
