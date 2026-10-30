@@ -12,11 +12,12 @@ Data Engineer based in Seoul, Korea 🇰🇷
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white)
 
-<!-- Generated in this repository by .github/workflows/profile-3d.yml, so it does
-     not depend on any third-party renderer staying up. -->
+<!-- Generated in this repository by .github/workflows/stats-card.yml
+     (scripts/build_activity_graph.py). It replaced github-readme-activity-graph,
+     whose public Vercel deployment has answered HTTP 402 since August 2026. -->
 
 <p>
-  <img alt="3D contribution calendar" width="830" src="./profile-3d-contrib/profile-night-view.svg" />
+  <img alt="Contributions over the last 31 days" width="830" src="./stats/activity-graph.svg" />
 </p>
 
 <!-- The row is one <p> so the images stay inline and can wrap; a line that
