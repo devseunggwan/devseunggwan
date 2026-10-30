@@ -27,9 +27,9 @@ query($login:String!, $from:DateTime!, $to:DateTime!) {
 
 DAYS = 31
 GRID = "#21262d"
-WIDTH, HEIGHT = 830, 300
+WIDTH, HEIGHT = 830, 320
 # Plot area inside the card: room for the title above and date labels below.
-LEFT, RIGHT, TOP, BOTTOM = 56, 24, 64, 44
+LEFT, RIGHT, TOP, BOTTOM = 64, 28, 88, 52
 
 
 def collect(login: str, today: date) -> list[tuple[date, int]]:
@@ -88,9 +88,9 @@ def render(login: str, days: list[tuple[date, int]]) -> str:
         "</linearGradient></defs>",
         f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="4.5" '
         f'fill="{BG}" stroke="{BORDER}"/>',
-        f'<text x="24" y="34" fill="{ACCENT}" font-size="15" font-weight="600">'
+        f'<text x="24" y="40" fill="{ACCENT}" font-size="20" font-weight="600">'
         f"Contribution graph</text>",
-        f'<text x="{WIDTH - 24}" y="34" fill="{LABEL}" font-size="12" text-anchor="end">'
+        f'<text x="{WIDTH - 24}" y="40" fill="{LABEL}" font-size="16" text-anchor="end">'
         f"Last {DAYS} days · {total:,} contributions</text>",
     ]
     for step in range(5):
@@ -101,27 +101,27 @@ def render(login: str, days: list[tuple[date, int]]) -> str:
             f'stroke="{GRID}" stroke-width="1"/>'
         )
         out.append(
-            f'<text x="{LEFT - 10}" y="{gy + 4:.1f}" fill="{LABEL}" font-size="11" '
+            f'<text x="{LEFT - 10}" y="{gy + 5:.1f}" fill="{LABEL}" font-size="15" '
             f'text-anchor="end">{value:,}</text>'
         )
     # A date label every 5 days, counted back from today so the last is always shown.
     for i in range(len(days) - 1, -1, -5):
         out.append(
-            f'<text x="{x(i):.1f}" y="{HEIGHT - 18}" fill="{LABEL}" font-size="11" '
+            f'<text x="{x(i):.1f}" y="{HEIGHT - 20}" fill="{LABEL}" font-size="15" '
             f'text-anchor="middle">{days[i][0].strftime("%m/%d")}</text>'
         )
     out.append(f'<polygon points="{area}" fill="url(#fill)"/>')
     out.append(
-        f'<polyline points="{line}" fill="none" stroke="{ACCENT}" stroke-width="2" '
+        f'<polyline points="{line}" fill="none" stroke="{ACCENT}" stroke-width="3" '
         'stroke-linejoin="round" stroke-linecap="round"/>'
     )
     for (px, py), (day, count) in zip(points, days):
         out.append(
-            f'<circle cx="{px:.1f}" cy="{py:.1f}" r="3" fill="{BG}" stroke="{ACCENT}" '
-            f'stroke-width="1.5"><title>{day.isoformat()}: {count}</title></circle>'
+            f'<circle cx="{px:.1f}" cy="{py:.1f}" r="4" fill="{BG}" stroke="{ACCENT}" '
+            f'stroke-width="2"><title>{day.isoformat()}: {count}</title></circle>'
         )
     out.append(
-        f'<text x="{LEFT}" y="{TOP - 12}" fill="{VALUE}" font-size="11">Contributions / day</text>'
+        f'<text x="{LEFT}" y="{TOP - 16}" fill="{VALUE}" font-size="15">Contributions / day</text>'
     )
     out.append("</svg>")
     return "\n".join(out) + "\n"
