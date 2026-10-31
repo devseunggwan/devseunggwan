@@ -61,6 +61,39 @@ def nice_max(value: int) -> int:
     return int(step * 4)
 
 
+def smooth_path(points: list[tuple[float, float]]) -> str:
+    """Path data for a smooth curve through every point.
+
+    Uses Steffen's monotone cubic interpolation (A&A 239, 443, 1990): between
+    two points the curve never rises above the higher one or dips below the
+    lower one, so a zero day stays on the baseline and a peak is not inflated.
+    Points are evenly spaced, so each segment is one cubic Bezier.
+    """
+    n = len(points)
+    if n < 3:
+        return "M" + " L".join(f"{px:.1f},{py:.1f}" for px, py in points)
+    h = points[1][0] - points[0][0]
+    slopes = [(points[i + 1][1] - points[i][1]) / h for i in range(n - 1)]
+
+    def sign(v: float) -> float:
+        return (v > 0) - (v < 0)
+
+    tangents = [slopes[0]]
+    for a, b in zip(slopes, slopes[1:]):
+        tangents.append((sign(a) + sign(b)) * min(abs(a), abs(b), abs(a + b) / 4))
+    tangents.append(slopes[-1])
+
+    d = f"M{points[0][0]:.1f},{points[0][1]:.1f}"
+    for i in range(n - 1):
+        (x0, y0), (x1, y1) = points[i], points[i + 1]
+        d += (
+            f" C{x0 + h / 3:.1f},{y0 + tangents[i] * h / 3:.1f}"
+            f" {x1 - h / 3:.1f},{y1 - tangents[i + 1] * h / 3:.1f}"
+            f" {x1:.1f},{y1:.1f}"
+        )
+    return d
+
+
 def render(login: str, days: list[tuple[date, int]]) -> str:
     plot_w = WIDTH - LEFT - RIGHT
     plot_h = HEIGHT - TOP - BOTTOM
@@ -77,7 +110,7 @@ def render(login: str, days: list[tuple[date, int]]) -> str:
     # broken image for the first version, which used a gradient, polygon,
     # polyline and per-point <title>. The stats card, which renders there,
     # sticks to basic shapes, so this does too.
-    line = "M" + " L".join(f"{px:.1f},{py:.1f}" for px, py in points)
+    line = smooth_path(points)
     area = f"{line} L{LEFT + plot_w},{TOP + plot_h} L{LEFT},{TOP + plot_h} Z"
     total = sum(count for _, count in days)
 
