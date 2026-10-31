@@ -17,7 +17,7 @@ Data Engineer based in Seoul, Korea 🇰🇷
      whose public Vercel deployment has answered HTTP 402 since August 2026. -->
 
 <p>
-  <img alt="Contributions over the last 31 days" width="830" src="./stats/activity-graph.svg" />
+  <img alt="Contributions over the last 31 days" width="830" src="./stats/activity.svg" />
 </p>
 
 <!-- The row is one <p> so the images stay inline and can wrap; a line that

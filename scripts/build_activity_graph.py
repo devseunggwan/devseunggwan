@@ -73,8 +73,12 @@ def render(login: str, days: list[tuple[date, int]]) -> str:
         return TOP + plot_h * (1 - count / top)
 
     points = [(x(i), y(count)) for i, (_, count) in enumerate(days)]
-    line = " ".join(f"{px:.1f},{py:.1f}" for px, py in points)
-    area = f"{LEFT},{TOP + plot_h} {line} {LEFT + plot_w},{TOP + plot_h}"
+    # Plain <path> data only: the GitHub mobile app's image renderer showed a
+    # broken image for the first version, which used a gradient, polygon,
+    # polyline and per-point <title>. The stats card, which renders there,
+    # sticks to basic shapes, so this does too.
+    line = "M" + " L".join(f"{px:.1f},{py:.1f}" for px, py in points)
+    area = f"{line} L{LEFT + plot_w},{TOP + plot_h} L{LEFT},{TOP + plot_h} Z"
     total = sum(count for _, count in days)
 
     out = [
@@ -82,10 +86,6 @@ def render(login: str, days: list[tuple[date, int]]) -> str:
         f'viewBox="0 0 {WIDTH} {HEIGHT}" role="img" '
         f'aria-label="Contributions by {escape(login)} over the last {DAYS} days">',
         "<style>text{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',sans-serif}</style>",
-        '<defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">'
-        f'<stop offset="0" stop-color="{ACCENT}" stop-opacity="0.35"/>'
-        f'<stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/>'
-        "</linearGradient></defs>",
         f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="4.5" '
         f'fill="{BG}" stroke="{BORDER}"/>',
         f'<text x="24" y="40" fill="{ACCENT}" font-size="20" font-weight="600">'
@@ -110,15 +110,12 @@ def render(login: str, days: list[tuple[date, int]]) -> str:
             f'<text x="{x(i):.1f}" y="{HEIGHT - 20}" fill="{LABEL}" font-size="15" '
             f'text-anchor="middle">{days[i][0].strftime("%m/%d")}</text>'
         )
-    out.append(f'<polygon points="{area}" fill="url(#fill)"/>')
-    out.append(
-        f'<polyline points="{line}" fill="none" stroke="{ACCENT}" stroke-width="3" '
-        'stroke-linejoin="round" stroke-linecap="round"/>'
-    )
-    for (px, py), (day, count) in zip(points, days):
+    out.append(f'<path d="{area}" fill="{ACCENT}" fill-opacity="0.15"/>')
+    out.append(f'<path d="{line}" fill="none" stroke="{ACCENT}" stroke-width="3"/>')
+    for px, py in points:
         out.append(
             f'<circle cx="{px:.1f}" cy="{py:.1f}" r="4" fill="{BG}" stroke="{ACCENT}" '
-            f'stroke-width="2"><title>{day.isoformat()}: {count}</title></circle>'
+            'stroke-width="2"/>'
         )
     out.append(
         f'<text x="{LEFT}" y="{TOP - 16}" fill="{VALUE}" font-size="15">Contributions / day</text>'
@@ -131,7 +128,7 @@ def main() -> None:
     if len(sys.argv) < 2:
         raise SystemExit("usage: build_activity_graph.py <login> [out_path]")
     login = sys.argv[1]
-    out_path = sys.argv[2] if len(sys.argv) > 2 else "stats/activity-graph.svg"
+    out_path = sys.argv[2] if len(sys.argv) > 2 else "stats/activity.svg"
 
     days = collect(login, datetime.now(timezone.utc).date())
     print(f"  days={len(days)} total={sum(c for _, c in days)}", file=sys.stderr)

@@ -46,10 +46,10 @@ jobs:
           # while the per-type totals collapsed. See the script's docstring.
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/build_stats_card.py "${{ github.repository_owner }}" stats/stats.svg
-      - name: Render stats/activity-graph.svg
+      - name: Render stats/activity.svg
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_activity_graph.py "${{ github.repository_owner }}" stats/activity-graph.svg
+        run: python3 scripts/build_activity_graph.py "${{ github.repository_owner }}" stats/activity.svg
 
   publish:
     if: github.event_name != 'pull_request'
@@ -63,15 +63,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/build_stats_card.py "${{ github.repository_owner }}" stats/stats.svg
-      - name: Render stats/activity-graph.svg
+      - name: Render stats/activity.svg
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_activity_graph.py "${{ github.repository_owner }}" stats/activity-graph.svg
+        run: python3 scripts/build_activity_graph.py "${{ github.repository_owner }}" stats/activity.svg
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add stats/stats.svg stats/activity-graph.svg
+          git add stats/stats.svg stats/activity.svg
           git diff --cached --quiet || git commit -m "chore: refresh stats cards"
           # Guards against a push that lands on master while this job runs.
           git pull --rebase origin "${GITHUB_REF_NAME}"
