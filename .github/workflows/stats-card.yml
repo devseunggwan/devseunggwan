@@ -2,7 +2,10 @@ name: Stats Card
 
 on:
   schedule:
-    - cron: "30 18 * * *"
+    # Every 4 hours (00:30, 04:30, ... UTC = 09:30, 13:30, ... KST) so the
+    # 31-day graph shows today's activity within hours instead of next day.
+    # Minute 30 keeps clear of the top-of-hour rush that delays scheduled runs.
+    - cron: "30 */4 * * *"
   workflow_dispatch:
   # workflow_dispatch only reaches workflows already on the default branch,
   # so a PR touching the generator needs its own trigger to prove the render
