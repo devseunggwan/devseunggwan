@@ -1,5 +1,7 @@
 Data Engineer based in Seoul, Korea 🇰🇷
 
+[![committers.top badge](https://user-badge.committers.top/south_korea/devseunggwan.svg)](https://committers.top/south_korea#devseunggwan)
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
