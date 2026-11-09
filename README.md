@@ -1,8 +1,12 @@
 Data Engineer based in Seoul, Korea 🇰🇷
 
-[![South Korean public-commit ranking on committers.top](https://user-badge.committers.top/south_korea/devseunggwan.svg)](https://committers.top/south_korea#devseunggwan)
-[![South Korean public-contribution ranking on committers.top](https://user-badge.committers.top/south_korea_public/devseunggwan.svg)](https://committers.top/south_korea_public#devseunggwan)
-[![South Korean all-contribution ranking on committers.top](https://user-badge.committers.top/south_korea_private/devseunggwan.svg)](https://committers.top/south_korea_private#devseunggwan)
+<!-- committers.top's own badges are 377px wide each, so shields.io reads the
+     rank out of each badge's <title> and redraws it in the flat-square style
+     the tech badges below use. -->
+
+[![South Korean public-commit ranking on committers.top](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fuser-badge.committers.top%2Fsouth_korea%2Fdevseunggwan.svg&query=substring-before%28substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%23%27%29%2C%27+%27%29&label=KR+commits&prefix=%23&style=flat-square&color=007ec6)](https://committers.top/south_korea#devseunggwan)
+[![South Korean public-contribution ranking on committers.top](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fuser-badge.committers.top%2Fsouth_korea_public%2Fdevseunggwan.svg&query=substring-before%28substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%23%27%29%2C%27+%27%29&label=KR+contributions&prefix=%23&style=flat-square&color=007ec6)](https://committers.top/south_korea_public#devseunggwan)
+[![South Korean all-contribution ranking on committers.top](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fuser-badge.committers.top%2Fsouth_korea_private%2Fdevseunggwan.svg&query=substring-before%28substring-after%28%2F%2F%2A%5Blocal-name%28%29%3D%27title%27%5D%2C%27%23%27%29%2C%27+%27%29&label=KR+all&prefix=%23&style=flat-square&color=007ec6)](https://committers.top/south_korea_private#devseunggwan)
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
