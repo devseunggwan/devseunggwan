@@ -2,10 +2,12 @@ name: Stats Card
 
 on:
   schedule:
-    # Every 4 hours (00:30, 04:30, ... UTC = 09:30, 13:30, ... KST) so the
+    # Every 2 hours (00:30, 02:30, ... UTC = 09:30, 11:30, ... KST) so the
     # 31-day graph shows today's activity within hours instead of next day.
+    # GitHub delays and drops scheduled runs under load, so 4 hours left
+    # 8-10 hour gaps; more attempts shrink them.
     # Minute 30 keeps clear of the top-of-hour rush that delays scheduled runs.
-    - cron: "30 */4 * * *"
+    - cron: "30 */2 * * *"
   workflow_dispatch:
   # workflow_dispatch only reaches workflows already on the default branch,
   # so a PR touching the generator needs its own trigger to prove the render
